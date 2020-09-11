@@ -1,0 +1,21 @@
+apply plugin: 'com.huawei.ohos.hap'
+ohos {
+    compileSdkVersion 3
+    defaultConfig {
+        compatibleSdkVersion 3
+    }
+    
+}
+
+repositories {
+    //mavenCentral()
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile'junit:junit:4.12'
+}
